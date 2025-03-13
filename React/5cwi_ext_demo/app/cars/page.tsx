@@ -1,6 +1,7 @@
 import React from 'react'
 import Card from '../components/ui/cars/Card'
 import { Car } from '../lib/types/types';
+import CarList from '../components/ui/cars/CarList';
 
 type Props = {}
 
@@ -55,7 +56,7 @@ export default function page({}: Props) {
   return (
     <div>
       <p>Cars</p>
-        {car.map((car: Car)=><Card car={car}/>)}
+        <CarList cars={car}/>
     </div>
   )
 }
